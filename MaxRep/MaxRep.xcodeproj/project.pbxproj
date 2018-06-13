@@ -18,6 +18,8 @@
 		7C15776C20D0C07200311B38 /* ExerciseNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C15776B20D0C07200311B38 /* ExerciseNames.json */; };
 		7C15776E20D0C44B00311B38 /* JSONImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15776D20D0C44B00311B38 /* JSONImporter.swift */; };
 		7C15777220D0E94700311B38 /* ExerciseNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777120D0E94700311B38 /* ExerciseNameCell.swift */; };
+		7C15777420D0EB4D00311B38 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777320D0EB4D00311B38 /* EditViewController.swift */; };
+		7C15777620D0EC8500311B38 /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777520D0EC8500311B38 /* EditCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		7C15776B20D0C07200311B38 /* ExerciseNames.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExerciseNames.json; sourceTree = "<group>"; };
 		7C15776D20D0C44B00311B38 /* JSONImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONImporter.swift; sourceTree = "<group>"; };
 		7C15777120D0E94700311B38 /* ExerciseNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseNameCell.swift; sourceTree = "<group>"; };
+		7C15777320D0EB4D00311B38 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		7C15777520D0EC8500311B38 /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
 		D90B14B1B509EF63E831BE03 /* Pods-MaxRep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.debug.xcconfig"; sourceTree = "<group>"; };
 		E827C8AA295297ACBCC45148 /* Pods-MaxRep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +77,9 @@
 			children = (
 				7C15775520D0B6BA00311B38 /* AppDelegate.swift */,
 				7C15775720D0B6BA00311B38 /* ViewController.swift */,
+				7C15777320D0EB4D00311B38 /* EditViewController.swift */,
 				7C15777120D0E94700311B38 /* ExerciseNameCell.swift */,
+				7C15777520D0EC8500311B38 /* EditCell.swift */,
 				7C15776920D0BFA900311B38 /* Exercise.swift */,
 				7C15776D20D0C44B00311B38 /* JSONImporter.swift */,
 				7C15776B20D0C07200311B38 /* ExerciseNames.json */,
@@ -231,7 +237,9 @@
 			files = (
 				7C15777220D0E94700311B38 /* ExerciseNameCell.swift in Sources */,
 				7C15775820D0B6BA00311B38 /* ViewController.swift in Sources */,
+				7C15777420D0EB4D00311B38 /* EditViewController.swift in Sources */,
 				7C15776E20D0C44B00311B38 /* JSONImporter.swift in Sources */,
+				7C15777620D0EC8500311B38 /* EditCell.swift in Sources */,
 				7C15775620D0B6BA00311B38 /* AppDelegate.swift in Sources */,
 				7C15776A20D0BFA900311B38 /* Exercise.swift in Sources */,
 			);

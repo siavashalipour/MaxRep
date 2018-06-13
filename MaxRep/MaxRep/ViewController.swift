@@ -78,5 +78,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     cell.config(with: AppDelegate.shared.exercise[indexPath.row])
     return cell 
   }
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = EditViewController()
+    vc.selectedIndex = indexPath.row
+    navigationController?.pushViewController(vc, animated: true)
+  }
 }
 
