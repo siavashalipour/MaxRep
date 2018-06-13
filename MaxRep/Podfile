@@ -8,7 +8,6 @@ target 'MaxRep' do
   # Pods for MaxRep
   pod 'SnapKit'
   pod 'SwiftyJSON'
-  pod 'RealmSwift', '3.6.0'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
 end

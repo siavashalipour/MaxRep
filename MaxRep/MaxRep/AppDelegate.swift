@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
 
+  static let shared = {
+    return UIApplication.shared.delegate as! AppDelegate
+  }()
+  var exercise: [Exercise] = []
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     FirebaseApp.configure()
