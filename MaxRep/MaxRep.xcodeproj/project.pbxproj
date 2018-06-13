@@ -13,6 +13,7 @@
 		7C15775B20D0B6BA00311B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C15775920D0B6BA00311B38 /* Main.storyboard */; };
 		7C15775D20D0B6BD00311B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C15775C20D0B6BD00311B38 /* Assets.xcassets */; };
 		7C15776020D0B6BD00311B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C15775E20D0B6BD00311B38 /* LaunchScreen.storyboard */; };
+		7C15776820D0BA6200311B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C15776720D0BA6200311B38 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7C15775C20D0B6BD00311B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C15775F20D0B6BD00311B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C15776120D0B6BD00311B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C15776720D0BA6200311B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D90B14B1B509EF63E831BE03 /* Pods-MaxRep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.debug.xcconfig"; sourceTree = "<group>"; };
 		E827C8AA295297ACBCC45148 /* Pods-MaxRep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 				7C15775520D0B6BA00311B38 /* AppDelegate.swift */,
 				7C15775720D0B6BA00311B38 /* ViewController.swift */,
 				7C15775920D0B6BA00311B38 /* Main.storyboard */,
+				7C15776720D0BA6200311B38 /* GoogleService-Info.plist */,
 				7C15775C20D0B6BD00311B38 /* Assets.xcassets */,
 				7C15775E20D0B6BD00311B38 /* LaunchScreen.storyboard */,
 				7C15776120D0B6BD00311B38 /* Info.plist */,
@@ -100,7 +103,6 @@
 				7C15774F20D0B6BA00311B38 /* Frameworks */,
 				7C15775020D0B6BA00311B38 /* Resources */,
 				27823F42DB84905590EA5333 /* [CP] Embed Pods Frameworks */,
-				FD446DE493670951130DACAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C15776020D0B6BD00311B38 /* LaunchScreen.storyboard in Resources */,
+				7C15776820D0BA6200311B38 /* GoogleService-Info.plist in Resources */,
 				7C15775D20D0B6BD00311B38 /* Assets.xcassets in Resources */,
 				7C15775B20D0B6BA00311B38 /* Main.storyboard in Resources */,
 			);
@@ -165,17 +168,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -198,21 +207,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD446DE493670951130DACAC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -371,7 +365,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33GWFDB497;
 				INFOPLIST_FILE = MaxRep/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Siavash.MaxRep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -387,7 +384,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33GWFDB497;
 				INFOPLIST_FILE = MaxRep/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Siavash.MaxRep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
