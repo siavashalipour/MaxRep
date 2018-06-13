@@ -21,7 +21,12 @@ final class EditViewController: UIViewController {
     tb.dataSource = self
     return tb
   }()
-  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    ViewModel.fetchData {
+      self.tableView.reloadData()
+    }
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(tableView)
@@ -47,7 +52,13 @@ extension EditViewController: UITableViewDelegate, UITableViewDataSource {
       cell = EditCell()
     }
     let item = AppDelegate.shared.exercise[selectedIndex].info[indexPath.row]
-    cell.config(with: item.value(forKey: "rep") as! Int, weight: item.value(forKey: "weight") as! Double)
+    cell.config(with: item.value(forKey: Constant.kRep) as! Int, weight: item.value(forKey: Constant.kWeight) as! Double)
     return cell
+  }
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = UpdateViewController()
+    vc.selectedIndex = selectedIndex
+    vc.selectedRepIndex = indexPath.row
+    navigationController?.pushViewController(vc, animated: true)
   }
 }

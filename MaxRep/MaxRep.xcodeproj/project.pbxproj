@@ -20,6 +20,10 @@
 		7C15777220D0E94700311B38 /* ExerciseNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777120D0E94700311B38 /* ExerciseNameCell.swift */; };
 		7C15777420D0EB4D00311B38 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777320D0EB4D00311B38 /* EditViewController.swift */; };
 		7C15777620D0EC8500311B38 /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777520D0EC8500311B38 /* EditCell.swift */; };
+		7C15777820D0F5FE00311B38 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777720D0F5FE00311B38 /* UpdateViewController.swift */; };
+		7C15777A20D0FBAC00311B38 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777920D0FBAC00311B38 /* Constant.swift */; };
+		7C15777C20D111D000311B38 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777B20D111D000311B38 /* ViewModel.swift */; };
+		7C15777E20D11BA000311B38 /* DashboardSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15777D20D11BA000311B38 /* DashboardSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		7C15777120D0E94700311B38 /* ExerciseNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseNameCell.swift; sourceTree = "<group>"; };
 		7C15777320D0EB4D00311B38 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		7C15777520D0EC8500311B38 /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
+		7C15777720D0F5FE00311B38 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		7C15777920D0FBAC00311B38 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		7C15777B20D111D000311B38 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7C15777D20D11BA000311B38 /* DashboardSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSearchBar.swift; sourceTree = "<group>"; };
 		D90B14B1B509EF63E831BE03 /* Pods-MaxRep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.debug.xcconfig"; sourceTree = "<group>"; };
 		E827C8AA295297ACBCC45148 /* Pods-MaxRep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,10 +86,14 @@
 				7C15775520D0B6BA00311B38 /* AppDelegate.swift */,
 				7C15775720D0B6BA00311B38 /* ViewController.swift */,
 				7C15777320D0EB4D00311B38 /* EditViewController.swift */,
+				7C15777720D0F5FE00311B38 /* UpdateViewController.swift */,
 				7C15777120D0E94700311B38 /* ExerciseNameCell.swift */,
+				7C15777B20D111D000311B38 /* ViewModel.swift */,
 				7C15777520D0EC8500311B38 /* EditCell.swift */,
 				7C15776920D0BFA900311B38 /* Exercise.swift */,
+				7C15777920D0FBAC00311B38 /* Constant.swift */,
 				7C15776D20D0C44B00311B38 /* JSONImporter.swift */,
+				7C15777D20D11BA000311B38 /* DashboardSearchBar.swift */,
 				7C15776B20D0C07200311B38 /* ExerciseNames.json */,
 				7C15775920D0B6BA00311B38 /* Main.storyboard */,
 				7C15776720D0BA6200311B38 /* GoogleService-Info.plist */,
@@ -235,13 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C15777C20D111D000311B38 /* ViewModel.swift in Sources */,
 				7C15777220D0E94700311B38 /* ExerciseNameCell.swift in Sources */,
 				7C15775820D0B6BA00311B38 /* ViewController.swift in Sources */,
+				7C15777A20D0FBAC00311B38 /* Constant.swift in Sources */,
 				7C15777420D0EB4D00311B38 /* EditViewController.swift in Sources */,
 				7C15776E20D0C44B00311B38 /* JSONImporter.swift in Sources */,
 				7C15777620D0EC8500311B38 /* EditCell.swift in Sources */,
 				7C15775620D0B6BA00311B38 /* AppDelegate.swift in Sources */,
 				7C15776A20D0BFA900311B38 /* Exercise.swift in Sources */,
+				7C15777E20D11BA000311B38 /* DashboardSearchBar.swift in Sources */,
+				7C15777820D0F5FE00311B38 /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

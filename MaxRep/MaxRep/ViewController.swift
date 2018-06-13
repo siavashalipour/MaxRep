@@ -13,6 +13,15 @@ import FirebaseDatabase
 
 class ViewController: UIViewController {
   
+  private lazy var searchBar: DashboardSearchBar = {
+    let s = DashboardSearchBar()
+    s.delegate = self
+    s.isHidden = false
+    return s
+  }()
+  private var keyword: String = ""
+  private var filtered = AppDelegate.shared.exercise
+
   private lazy var tableView: UITableView = {
     let tb = UITableView()
     tb.allowsSelection = true
@@ -22,35 +31,32 @@ class ViewController: UIViewController {
     return tb
   }()
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    ViewModel.fetchData {
+      self.filtered = AppDelegate.shared.exercise
+      self.tableView.reloadData()
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(tableView)
+    view.addSubview(searchBar)
+
     tableView.snp.makeConstraints { (make) in
-      make.edges.equalToSuperview()
+      make.left.right.bottom.equalToSuperview()
+      make.top.equalTo(searchBar.snp.bottom).offset(4)
     }
-    var ref: DatabaseReference!
-    ref = Database.database().reference()
-    ref.child("Exercise").observeSingleEvent(of: .value) { (snapshot) in
-      if !snapshot.hasChildren() {
-        // write for the first time
-        if let names = JSONImporter.getJSON() {
-          for (_,value):(String, JSON) in names["Exercise"] {
-            if let name = value["name"].string {
-              if let item = value["info"].arrayObject {
-                ref.child("Exercise").childByAutoId().setValue(["name":name,"info":item as! [NSDictionary] ])
-              }
-            }
-          }
-        }
+    searchBar.snp.makeConstraints { (make) in
+      make.left.right.equalTo(0)
+      if #available(iOS 11, *) {
+        let guide = self.view.safeAreaLayoutGuide
+        make.top.equalTo(guide.snp.top)
       } else {
-        for child in snapshot.children {
-          if let value = (child as? DataSnapshot)?.value as? NSDictionary {
-            let anExercise = Exercise.init(name: value["name"] as! String, info: value["info"] as! [NSDictionary], key: (child as? DataSnapshot)!.key)
-            AppDelegate.shared.exercise.append(anExercise)
-          }
-        }
-        self.tableView.reloadData()
+        make.top.equalTo(self.topLayoutGuide.snp.bottom)
       }
+      make.height.equalTo(64)
     }
   }
   
@@ -66,7 +72,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     return 1
   }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return AppDelegate.shared.exercise.count
+    return filtered.count
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: ExerciseNameCell
@@ -75,7 +81,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     } else {
       cell = ExerciseNameCell()
     }
-    cell.config(with: AppDelegate.shared.exercise[indexPath.row])
+    cell.config(with: filtered[indexPath.row])
     return cell 
   }
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -84,4 +90,47 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     navigationController?.pushViewController(vc, animated: true)
   }
 }
-
+// DashboardSearchBarDelegate
+extension ViewController: DashboardSearchBarDelegate {
+  func didBeginEditing() {
+    keyword = searchBar.searchTextField.text ?? ""
+  }
+  
+  func didEndEditing() {
+    keyword = searchBar.searchTextField.text ?? ""
+    if keyword == "" {
+      filtered = AppDelegate.shared.exercise
+    } else {
+      filtered = AppDelegate.shared.exercise.filter({$0.name.contains(keyword)})
+    }
+    tableView.reloadData()
+  }
+  
+  func searchbarTextUpdating(text: String) {
+    keyword = text
+    filtered = AppDelegate.shared.exercise.filter({$0.name.contains(keyword)})
+    tableView.reloadData()
+  }
+  
+  func willShowKeyboardWith(height: CGFloat) {
+    
+  }
+  
+  func willHideKeyboard() {
+    filtered = AppDelegate.shared.exercise
+    tableView.reloadData()
+  }
+  
+  func didDeleteSearchField() {
+    keyword = ""
+    filtered = AppDelegate.shared.exercise
+    tableView.reloadData()
+  }
+  
+  func didTapClose() {
+    filtered = AppDelegate.shared.exercise
+    tableView.reloadData()
+  }
+  
+  
+}
