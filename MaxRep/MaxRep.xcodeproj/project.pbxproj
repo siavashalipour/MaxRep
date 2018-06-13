@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458CC2058A975BE66E3ADF08 /* Pods_MaxRep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2720A6ABF877ADB26D2A48 /* Pods_MaxRep.framework */; };
 		7C15775620D0B6BA00311B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15775520D0B6BA00311B38 /* AppDelegate.swift */; };
 		7C15775820D0B6BA00311B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15775720D0B6BA00311B38 /* ViewController.swift */; };
 		7C15775B20D0B6BA00311B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C15775920D0B6BA00311B38 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B2720A6ABF877ADB26D2A48 /* Pods_MaxRep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaxRep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C15775220D0B6BA00311B38 /* MaxRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaxRep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C15775520D0B6BA00311B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C15775720D0B6BA00311B38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		7C15775C20D0B6BD00311B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C15775F20D0B6BD00311B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C15776120D0B6BD00311B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90B14B1B509EF63E831BE03 /* Pods-MaxRep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.debug.xcconfig"; sourceTree = "<group>"; };
+		E827C8AA295297ACBCC45148 /* Pods-MaxRep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxRep.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458CC2058A975BE66E3ADF08 /* Pods_MaxRep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				7C15775420D0B6BA00311B38 /* MaxRep */,
 				7C15775320D0B6BA00311B38 /* Products */,
+				CE9497BE6825D99B49DC905C /* Pods */,
+				F4F1B5B30789B87EC742028F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = MaxRep;
 			sourceTree = "<group>";
 		};
+		CE9497BE6825D99B49DC905C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D90B14B1B509EF63E831BE03 /* Pods-MaxRep.debug.xcconfig */,
+				E827C8AA295297ACBCC45148 /* Pods-MaxRep.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4F1B5B30789B87EC742028F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B2720A6ABF877ADB26D2A48 /* Pods_MaxRep.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C15776420D0B6BD00311B38 /* Build configuration list for PBXNativeTarget "MaxRep" */;
 			buildPhases = (
+				7A7350D9415DCDFC84CB33DF /* [CP] Check Pods Manifest.lock */,
 				7C15774E20D0B6BA00311B38 /* Sources */,
 				7C15774F20D0B6BA00311B38 /* Frameworks */,
 				7C15775020D0B6BA00311B38 /* Resources */,
+				27823F42DB84905590EA5333 /* [CP] Embed Pods Frameworks */,
+				FD446DE493670951130DACAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27823F42DB84905590EA5333 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A7350D9415DCDFC84CB33DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaxRep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD446DE493670951130DACAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxRep/Pods-MaxRep-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C15774E20D0B6BA00311B38 /* Sources */ = {
@@ -278,15 +365,13 @@
 		};
 		7C15776520D0B6BD00311B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90B14B1B509EF63E831BE03 /* Pods-MaxRep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33GWFDB497;
 				INFOPLIST_FILE = MaxRep/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Siavash.MaxRep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +381,13 @@
 		};
 		7C15776620D0B6BD00311B38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E827C8AA295297ACBCC45148 /* Pods-MaxRep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33GWFDB497;
 				INFOPLIST_FILE = MaxRep/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Siavash.MaxRep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
